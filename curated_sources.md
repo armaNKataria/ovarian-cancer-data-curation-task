@@ -14,13 +14,3 @@
 | CPTAC-OV Imaging (TCIA)                   | [https://www.cancerimagingarchive.net/collection/cptac-ov/]                                | Imaging + clinical + genomics + Proteomics | ~220 images                         | Direct download | CC BY 3.0                     | Imaging data linked to CPTAC ovarian cancer proteomics cohorts; supports imaging-proteomics integration                                  | CPTAC / TCGA IDs                                    | incomplete overlap with molecular datasets                                               |
 | TCGA-OV Proteogenomics Results            | [https://www.cancerimagingarchive.net/analysis-result/tcga-ov-proteogenomics/]             | Proteomics + clinical + genomics           | ~5K images                          | Direct download | CC BY 3.0                     | Integrated proteogenomic analysis results linked to imaging and TCGA data; useful as a reference                                         | CPTAC / TCGA IDs                                    | Summary results only; raw data is hosted external                                        |
 
-## Catalog Gaps & Integration Ideas
-
-- Most datasets focus on advanced stage ovarian cancer, while early stage cases are underrepresented, which limits insights into early detection.
-- Longitudinal clinical time-series data are largely absent across sources.
-- Proteomics datasets are generally small and experimental, with limited patient-level clinical information.
-- The catalog does not include mutation or CNV data, meaning genetic changes at the DNA level are not represented.
-- Identifier harmonization is challenging due to the use of different ID systems across Kaggle, GEO, TCGA, and ProteomeXchange datasets.
-- Future integration could focus on linking TCGA ovarian cancer imaging data with transcriptomics datasets using shared clinical variables such as age and disease stage.
-- -  or Combine transcriptomics (GEO) and proteomics (ProteomeXchange) to study concordance and differences between gene expression and protein abundance.
-
