@@ -1,0 +1,77 @@
+{
+  "dataset_name": "ovarian_universal",
+  "description": "Patient-level integrated dataset combining TCGA-OV radiology and proteogenomics metadata.",
+  "primary_key": "patient_id_canonical",
+  "columns": [
+    {
+      "name": "patient_id_canonical",
+      "type": "string",
+      "description": "Canonical TCGA patient identifier used to link datasets.",
+      "allowed_values": "TCGA-style patient IDs",
+      "provenance": "TCIA radiology and proteogenomics metadata"
+    },
+    {
+      "name": "n_studies",
+      "type": "integer",
+      "description": "Number of unique imaging studies for the patient.",
+      "allowed_values": ">= 0",
+      "provenance": "Aggregated from TCIA radiology metadata"
+    },
+    {
+      "name": "n_series",
+      "type": "integer",
+      "description": "Number of imaging series associated with the patient.",
+      "allowed_values": ">= 0",
+      "provenance": "Aggregated from TCIA radiology metadata"
+    },
+    {
+      "name": "total_images",
+      "type": "integer",
+      "description": "Total number of DICOM images across all series for the patient.",
+      "allowed_values": ">= 0",
+      "provenance": "Aggregated from TCIA radiology metadata"
+    },
+    {
+      "name": "modality",
+      "type": "string",
+      "description": "Most frequent imaging modality for the patient.",
+      "allowed_values": ["CT", "MR", "OT"],
+      "provenance": "TCIA radiology metadata"
+    },
+    {
+      "name": "manufacturer",
+      "type": "string",
+      "description": "Most frequent scanner manufacturer for the patient.",
+      "allowed_values": "Free-text vendor names",
+      "provenance": "TCIA radiology metadata"
+    },
+    {
+      "name": "pg_n_studies",
+      "type": "integer",
+      "description": "Number of imaging studies available for the patient in the proteogenomics subset.",
+      "allowed_values": ">= 0 or null",
+      "provenance": "Aggregated from TCIA proteogenomics metadata"
+    },
+    {
+      "name": "pg_n_series",
+      "type": "integer",
+      "description": "Number of imaging series for the patient in the proteogenomics subset.",
+      "allowed_values": ">= 0 or null",
+      "provenance": "Aggregated from TCIA proteogenomics metadata"
+    },
+    {
+      "name": "pg_total_images",
+      "type": "integer",
+      "description": "Total number of images for the patient in the proteogenomics subset.",
+      "allowed_values": ">= 0 or null",
+      "provenance": "Aggregated from TCIA proteogenomics metadata"
+    },
+    {
+      "name": "pg_manufacturer",
+      "type": "string",
+      "description": "Scanner manufacturer associated with proteogenomics imaging.",
+      "allowed_values": "Free-text vendor names or null",
+      "provenance": "TCIA proteogenomics metadata"
+    }
+  ]
+}
